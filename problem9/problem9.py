@@ -76,7 +76,9 @@ Produce histogram of DM mass distribution with mean and median
 '''
 
 # Histogram of the logarithm of Dark Matter mass
-dmHist = plt.hist(np.log10(massDM), bins=100, color='darkblue', edgecolor='black')
+dmHist = plt.hist(np.log10(massDM), bins=100, color='darkblue', edgecolor='black', label='Counts')
+
+plt.legend(loc='center right')
 plt.title('Dark Matter mass distribution')
 plt.xlabel(r'$log_{10}(M \, [10^{10} \, M_\odot/h])$')
 plt.ylabel('Counts')
@@ -119,7 +121,7 @@ plt.savefig('Spatial_distribution_panel.png')
 plt.show()
 
 '''
-BH mass vs stellar mass with threshold on BH mass
+BH mass vs stellar mass with threshold on BH mass and linear fit
 '''
 
 # Find haloes above threshold
@@ -147,14 +149,13 @@ plt.plot(xVals, optBH.intercept + optBH.slope*xVals, label=r'$y = {:.2f} \, x {:
 
 plt.grid()
 plt.yscale('log')
-plt.title('BH mass vs Stellar mass')
+plt.title('BH mass vs stellar mass')
 plt.xlabel(r'Stellar mass $[10^{10} \, M_\odot/h]$')
 plt.ylabel(r'Black hole mass $[10^{10} \, M_\odot/h]$')
 plt.legend()
 
 plt.savefig('BH_stellar_mass_log.png')
 plt.show()
-
 
 '''
 2d cumulative histogram
@@ -187,5 +188,3 @@ plt.colorbar(label='Number of haloes')
 
 plt.savefig('Cumulative_2dhistogram')
 plt.show()
-
-    
