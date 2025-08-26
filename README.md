@@ -28,8 +28,14 @@ Lo script genera il file test_file nella cartella corrente per editarne i conten
 -------------------------------------------------------------------------------------------------
 Script problem9.py
 
+Lo script è stato compilato con NumPy < 2 . L’utilizzo di versioni differenti potrebbe generare errori.  
 Lo script legge il file file2_Groups_AGN-wWU_500Mpc_Data.txt e produce in output i grafici richiesti, mostrandoli a schermo ed esportandoli come file .png nella cartella corrente.
 
 Commenti ai grafici:
-1) Il grafico "DM mass vs baryonic mass" è generato inizialmente in scala loglog per valorizzare la visualizzazione dei dati. Stime dei parametri ottenute dal fit lineare: m = 8.67521583612929, b = -0.08625291537934315. Il fit lineare è stato visualizzato insieme ai dati in un secondo grafico in scala lineare, in quanto l'intercetta negativa fa sì che la retta non sia visualizzabile in scala loglog per valori x<0.02.
-2) Il grafico "BH mass vs stellar mass" è generato sia in scala lineare che semilogaritmica con il fit sovrapposto. Stime dei parametri ottenute dal fit lineare: m = 0.2807856720440714, b = -0.00128457411678284.
+1) Il grafico "DM mass vs baryonic mass" è generato inizialmente in scala loglog per valorizzare la visualizzazione dei dati. Stime dei parametri ottenute dal fit lineare y=mx+b:  
+m = 8.67521583612929  
+b = -0.08625291537934315.  
+Il fit lineare è stato visualizzato insieme ai dati in un secondo grafico in scala lineare, in quanto l'intercetta negativa fa sì che la retta non sia visualizzabile in scala loglog per valori x<0.02.
+2) Il grafico "BH mass vs stellar mass" è generato sia in scala lineare che semilogaritmica con il fit sovrapposto. Stime dei parametri ottenute dal fit lineare y=mx+b:  
+m = 0.2807856720440714    
+b = -0.00128457411678284.
